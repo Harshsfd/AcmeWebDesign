@@ -1,4 +1,4 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.5;
@@ -7,121 +7,206 @@ body{
     background-color: #f4f4f4;
 }
 
-.container{
-    width: 80%;
+.container {
+    max-width: 1200px;
+    width: 90%;
     margin: auto;
-    overflow: hidden;
+    padding: 0 15px;
 }
 
-ul{
+ul {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-.button_1{
+.button_1 {
     height: 38px;
-    background-color:#e8491d;
+    background-color: #e8491d;
     border: none;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 0 20px;
+    color: white;
+    cursor: pointer;
 }
-.button_1:hover{
-    background-color:#ccc;
 
+.button_1:hover {
+    background-color: #ccc;
+    color: black;
 }
-header{
+
+header {
     background: #35424a;
     color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
+    padding: 30px 0;
     border-bottom: #e8491d 3px solid;
 }
 
-header a{
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
 
-header li{
-    float: left;
-    display: inline;
-    padding: 0 20px 0 20px;
+header ul {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-header #branding{
-    float: left;
+header li {
+    padding: 0 20px;
 }
 
-header #branding h1{
-    margin:0;
+header #branding h1 {
+    margin: 0;
 }
 
-header nav{
-    float: right;
-    margin-top: 5px;
-}
-
-header .highlight,header .current a{
+header .highlight,
+header .current a {
     color: #e8491d;
     font-weight: bold;
 }
 
-header a:hover{
+header a:hover {
     color: #ccc;
     font-weight: bold;
 }
-/*SHOWCASE*/
-#showcase{
+
+/* SHOWCASE */
+#showcase {
     min-height: 400px;
     background-image: url('showcase_png.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-#showcase h1{
+
+#showcase h1 {
     margin-top: 100px;
     font-size: 55px;
     margin-bottom: 10px;
 }
-#showcase p{
+
+#showcase p {
     font-size: 20px;
 }
-#newsletter{
+
+/* NEWSLETTER */
+#newsletter {
     padding: 15px;
     color: white;
     background-color: #35424a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
-#newsletter h1{
-    float: left;
+
+#newsletter h1 {
+    margin: 0;
+    font-size: 24px;
 }
-#newsletter form{
-    float: right;
+
+#newsletter form {
     margin-top: 15px;
 }
-#newsletter input[type="email"]{
+
+#newsletter input[type="email"] {
     padding: 4px;
     height: 25px;
     width: 250px;
+    max-width: 100%;
 }
-/* boxes area*/
-#boxes{
+
+/* BOXES */
+#boxes {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
 }
-#boxes .box{
-    float: left;
+
+#boxes .box {
+    flex: 1 1 30%;
     text-align: center;
-    width: 30%;
     padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
 }
-#boxes .box img{
+
+#boxes .box img {
     width: 90px;
 }
 
-footer{
+/* FOOTER */
+footer {
     padding: 20px;
     margin-top: 20px;
     color: #fff;
     background-color: #e8491d;
     text-align: center;
 }
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    header li {
+        padding: 10px 0;
+    }
+
+    #showcase h1 {
+        font-size: 32px;
+        margin-top: 40px;
+    }
+
+    #showcase p {
+        font-size: 16px;
+    }
+
+    #newsletter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #newsletter h1 {
+        margin-bottom: 10px;
+    }
+
+    #boxes {
+        flex-direction: column;
+    }
+
+    #boxes .box {
+        flex: 1 1 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    }
+    
